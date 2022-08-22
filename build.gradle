@@ -22,7 +22,7 @@ dependencies {
     annotationProcessor 'com.google.auto.service:auto-service:1.0.1'
 
     implementation 'io.lumine:Mythic-Dist:5.0.3-SNAPSHOT'
-    compileOnly 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT'
 }
 
 test {
