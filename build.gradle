@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'me.mrfunny.annotation'
+group 'me.mrfunny'
 version '1.0'
 
 repositories {
@@ -10,13 +10,19 @@ repositories {
     maven {
         url 'https://mvn.lumine.io/repository/maven-public/'
     }
+    maven {
+        url 'https://repo.papermc.io/repository/maven-public/'
+    }
 }
 
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     compileOnly 'com.google.auto.service:auto-service:1.0.1'
     annotationProcessor 'com.google.auto.service:auto-service:1.0.1'
 
-    compileOnly 'io.lumine:Mythic-Dist:5.0.3-SNAPSHOT'
+    implementation 'io.lumine:Mythic-Dist:5.0.3-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT'
 }
 
 test {

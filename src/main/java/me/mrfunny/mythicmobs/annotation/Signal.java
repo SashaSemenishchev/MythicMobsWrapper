@@ -1,4 +1,4 @@
-package me.mrfunny.modelengine.annotation;
+package me.mrfunny.mythicmobs.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

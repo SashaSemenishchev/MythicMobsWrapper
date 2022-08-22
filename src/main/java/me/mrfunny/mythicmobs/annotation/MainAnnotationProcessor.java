@@ -1,4 +1,4 @@
-package me.mrfunny.modelengine.annotation;
+package me.mrfunny.mythicmobs.annotation;
 
 import com.google.auto.service.AutoService;
 
@@ -17,8 +17,8 @@ import java.util.Map;
 import java.util.Set;
 
 @AutoService(Processor.class)
-@SupportedSourceVersion(SourceVersion.RELEASE_10)
-@SupportedAnnotationTypes("me.mrfunny.annotation.*")
+@SupportedSourceVersion(SourceVersion.RELEASE_17)
+@SupportedAnnotationTypes("me.mrfunny.mythicmobs.annotation.*")
 public class MainAnnotationProcessor extends AbstractProcessor {
     private boolean created = false;
     @Override
@@ -61,7 +61,7 @@ public class MainAnnotationProcessor extends AbstractProcessor {
                 }
                 out.println("public class Signals {");
                 for(Map.Entry<String, String[]> entry : generated.entrySet()) {
-                    out.println("public static enum For" + entry.getKey() + " {");
+                    out.println("public static enum For" + entry.getKey() + " implements me.mrfunny.mythicmobs.internal.MobSignal {");
                     out.println(String.join(",", entry.getValue()));
                     out.println("}");
                 }
