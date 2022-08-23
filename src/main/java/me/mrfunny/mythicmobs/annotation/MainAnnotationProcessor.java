@@ -1,7 +1,7 @@
 package me.mrfunny.mythicmobs.annotation;
 
 import com.google.auto.service.AutoService;
-import me.mrfunny.mythicmobs.wrapper.Mob;
+import me.mrfunny.mythicmobs.wrapper.SpawnedMob;
 
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
@@ -36,8 +36,8 @@ public class MainAnnotationProcessor extends AbstractProcessor {
                 continue;
             }
             TypeMirror type = element.asType();
-            if(!isInstance(type, Mob.class)) {
-                processingEnv.getMessager().printMessage(Diagnostic.Kind.WARNING, "Class " + type + " is annotated with @Signal it doesn't implement Mob class (" + Mob.class.getName() + ")");
+            if(!isInstance(type, SpawnedMob.class)) {
+                processingEnv.getMessager().printMessage(Diagnostic.Kind.WARNING, "Class " + type + " is annotated with @Signal it doesn't implement Mob class (" + SpawnedMob.class.getName() + ")");
             }
             empty = false;
             String className = type.toString();

@@ -8,4 +8,7 @@ public class Locations {
     public static AbstractLocation fromBukkit(Location location) {
         return new AbstractLocation(Position.of(location));
     }
+    public static Location toBukkit(AbstractLocation location) {
+        return Position.of(location.getX(), location.getY(), location.getZ(), location.getWorld().getName()).toLocation();
+    }
 }
