@@ -1,7 +1,6 @@
 package me.mrfunny.mythicmobs.wrapper;
 
 import io.lumine.mythic.api.adapters.AbstractLocation;
-import io.lumine.mythic.bukkit.utils.serialize.Position;
 import io.lumine.mythic.core.mobs.ActiveMob;
 import me.mrfunny.mythicmobs.internal.MobSignal;
 import org.bukkit.Location;

@@ -1,8 +1,6 @@
 package me.mrfunny.mythicmobs.wrapper;
 
-import io.lumine.mythic.api.adapters.AbstractLocation;
 import io.lumine.mythic.api.mobs.MythicMob;
-import io.lumine.mythic.bukkit.utils.serialize.Position;
 import io.lumine.mythic.core.mobs.ActiveMob;
 import org.bukkit.Location;
 
@@ -12,7 +10,8 @@ public class MobBlueprint {
     private String mobId;
 
     public MobBlueprint() {
-        this.mobId = getClass().getSimpleName().replace("Mob", "");
+        String ret = getClass().getSimpleName().replaceAll("([A-Z]+)([A-Z][a-z])", "$1_$2").replaceAll("([a-z])([A-Z])", "$1_$2");
+        this.mobId = ret.toUpperCase();
         if(mobId.equals("")) {
             mobId = "DeveloperMob";
         }
